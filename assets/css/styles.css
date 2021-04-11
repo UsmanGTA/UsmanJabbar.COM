@@ -11,13 +11,15 @@ html, body {
     height: 100%;
 }
 
-h1     { font-size: 4.375rem; }
-h2     { font-size: 2.500rem; }
-h3     { font-size: 1.563rem; }
-h4     { font-size: 1.125rem; }
-h5     { font-size: 0.875rem; }
-p      { font-size: 1.125rem; }
-button { font-size: 1.563rem; }
+h1       { font-size: 4.375rem; }
+h2       { font-size: 2.500rem; }
+h3       { font-size: 1.563rem; }
+h4       { font-size: 1.125rem; }
+h5       { font-size: 0.875rem; }
+p        { font-size: 1.125rem; }
+input    { font-size: 1.563rem; }
+button   { font-size: 1.563rem; }
+textarea { font-size: 1.563rem; }
 
 h1, h2,
 h3, h4,
@@ -28,7 +30,7 @@ button {
 	letter-spacing: -0.06em;
 }
 b { font-weight: 700; }
-p { letter-spacing: -0.06rem;}
+p { letter-spacing: -0.06em;}
 
 /* COLORS TAGS */
 .bg-color-black {
@@ -60,11 +62,15 @@ p { letter-spacing: -0.06rem;}
 .bg-project-airbnb {
 	background-image: url(../images/r-architecture-wDDfbanbhl8-unsplash.jpg);
 }
+
+/* TEXT TAGS */
 .unuppercase {
 	text-transform: unset;
 	font-weight: 400;
 }
-
+.letter-spacing-wide {
+	letter-spacing: 0.4rem;
+}
 /*  COMPONENTS
     =============== */
 .section {
@@ -129,6 +135,10 @@ p { letter-spacing: -0.06rem;}
 	line-height: 0.8;
 }
 
+#logo-large {
+	font-size: 6.25rem;
+}
+
 /* QUOTE SECTION */
 #quote-1 .container {
 	height: unset;
@@ -174,4 +184,30 @@ p { letter-spacing: -0.06rem;}
 }
 #skills #skills-programming, #skills #skills-libraries {
 	width: 25%;
+}
+
+/* CONTACT SECTION */
+#contact {
+	background-color: #151515;
+	color: var(--color-white);
+}
+#contact #contact-description > h2 {
+	max-width: 50%;
+}
+#contact form #form-details, #contact form #form-message {
+	width: 50%;
+}
+
+/* FOOTER SECTION */
+#footer * {
+	text-transform: unset;
+	font-weight: 600;
+}
+#footer .container {
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+#footer h5.letter-spacing-wide {
+	text-transform: uppercase;
 }
