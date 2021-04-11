@@ -29,6 +29,7 @@ button {
 }
 b { font-weight: 700; }
 p { letter-spacing: -0.06rem;}
+
 /* COLORS TAGS */
 .bg-color-black {
 	background-color: var(--color-black);
@@ -85,11 +86,14 @@ p { letter-spacing: -0.06rem;}
 
 .flex-row {
 	display: flex;
-	justify-content: space-between;
 }
 .flex-row * {
 	margin-top: auto;
 	margin-bottom: auto;
+}
+
+.flex-space-between {
+	justify-content: space-between;
 }
 
 .flex-centered {
@@ -129,9 +133,6 @@ p { letter-spacing: -0.06rem;}
 #quote-1 .container {
 	height: unset;
 }
-#quote-1 .container .flex-row {
-	justify-content: space-between;
-}
 #quote-1 .container .flex-row > h2 {
 	max-width: 60%;
 }
@@ -162,4 +163,15 @@ p { letter-spacing: -0.06rem;}
 		"card-1 card-1 card-2"
 		"card-3 card-4 card-4";
 	color: var(--color-white);
+}
+
+#skills .container {
+	height: unset;
+}
+#skills #skills-description {
+	max-width: 50%;
+	margin-right: 2rem;
+}
+#skills #skills-programming, #skills #skills-libraries {
+	width: 25%;
 }
