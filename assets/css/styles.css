@@ -1,0 +1,165 @@
+:root {
+	/* Colors */
+	--color-white: #FFF;
+	--color-black: #000;
+	--color-primary: linear-gradient(270deg, #00E0FF 0.13%, #00A3FF 100.59%);
+}
+
+/* BASE TAGS */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+h1     { font-size: 4.375rem; }
+h2     { font-size: 2.500rem; }
+h3     { font-size: 1.563rem; }
+h4     { font-size: 1.125rem; }
+h5     { font-size: 0.875rem; }
+p      { font-size: 1.125rem; }
+button { font-size: 1.563rem; }
+
+h1, h2,
+h3, h4,
+h5, h6,
+button {
+	text-transform: uppercase;
+	margin: 1rem 0;
+	letter-spacing: -0.06em;
+}
+b { font-weight: 700; }
+p { letter-spacing: -0.06rem;}
+/* COLORS TAGS */
+.bg-color-black {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+.bg-color-white {
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+.bg-color-primary {
+	background: var(--color-primary);
+	color: var(--color-white);
+}
+.bg-config {
+	background-position: center;
+	background-size: cover;
+}
+/* BACKGROUND TAGS */
+.bg-project-geeksultd {
+	background-image: url(../images/Usman-Abdul-Jabbar-NZXT-PC-2020.jpg);
+}
+.bg-project-user-auth {
+	background-image: url(../images/tim-roosjen-shuJeGn-ze8-unsplash.jpg);
+}
+.bg-project-simple-shell {
+	background-image: url(../images/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg);
+}
+.bg-project-airbnb {
+	background-image: url(../images/r-architecture-wDDfbanbhl8-unsplash.jpg);
+}
+.unuppercase {
+	text-transform: unset;
+	font-weight: 400;
+}
+
+/*  COMPONENTS
+    =============== */
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+
+.container {
+	width: 1400px;
+	height: 1024px;
+	max-width: 90%;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	padding: 3rem;
+}
+
+.flex-row {
+	display: flex;
+	justify-content: space-between;
+}
+.flex-row * {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.flex-centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.button-minimal {
+	width: 200px;
+    text-transform: uppercase;
+    padding: 0.5rem 0 1rem 0;
+}
+
+.inline-container > * {
+	margin: 0.5rem;
+}
+.inline-container > *:first-child {
+	margin-left: 0;
+}
+.inline-container > *:last-child {
+	margin-right: 0;
+}
+
+/*  CUSTOM CSS
+    ================= */
+
+/* HERO SECTION */
+#hero-title {
+	font-size: 6.25rem;
+}
+#hero-title, #hero-caption {
+	line-height: 0.8;
+}
+
+/* QUOTE SECTION */
+#quote-1 .container {
+	height: unset;
+}
+#quote-1 .container .flex-row {
+	justify-content: space-between;
+}
+#quote-1 .container .flex-row > h2 {
+	max-width: 60%;
+}
+#quote-1 a, #quote-1 a > button {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/* PROJECTS SECTION */
+#projects .container {
+	justify-content: unset;
+}
+
+#card-1 { grid-area: card-1; }
+#card-2 { grid-area: card-2; }
+#card-3 { grid-area: card-3; }
+#card-4 { grid-area: card-4; }
+[id^='card-'] {padding: 3rem;}
+
+#projects .card-container {
+	height: 100%;
+	margin: 2rem 0;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+		"card-1 card-1 card-2"
+		"card-3 card-4 card-4";
+	color: var(--color-white);
+}
