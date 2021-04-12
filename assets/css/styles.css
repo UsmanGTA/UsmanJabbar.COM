@@ -35,6 +35,7 @@ input, textarea {
 	resize: none;
 }
 
+
 /* COLORS TAGS */
 .bg-color-black {
 	background-color: var(--color-black);
@@ -48,23 +49,58 @@ input, textarea {
 	background: var(--color-primary);
 	color: var(--color-white);
 }
-.bg-config {
+.bg-config::after {
 	background-position: center;
 	background-size: cover;
 }
+
+
 /* BACKGROUND TAGS */
-.bg-project-geeksultd {
-	background-image: url(../images/Usman-Abdul-Jabbar-NZXT-PC-2020.jpg);
+.bg-project-geeksultd:after {
+	content: "";
+	position: absolute;
+	background-image: url(../images/Usman-Abdul-Jabbar-NZXT-PC-2020.jpg)!important;
+	filter: brightness(0.6);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
 }
-.bg-project-user-auth {
-	background-image: url(../images/tim-roosjen-shuJeGn-ze8-unsplash.jpg);
+.bg-project-user-auth:after {
+	content: "";
+	position: absolute;
+	background-image: url(../images/tim-roosjen-shuJeGn-ze8-unsplash.jpg)!important;
+	filter: brightness(0.6);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
 }
-.bg-project-simple-shell {
-	background-image: url(../images/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg);
+.bg-project-simple-shell:after {
+	content: "";
+	position: absolute;
+	background-image: url(../images/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg)!important;
+	filter: brightness(0.6);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
 }
-.bg-project-airbnb {
-	background-image: url(../images/r-architecture-wDDfbanbhl8-unsplash.jpg);
+.bg-project-airbnb:after {
+	content: "";
+	position: absolute;
+	background-image: url(../images/r-architecture-wDDfbanbhl8-unsplash.jpg)!important;
+	filter: brightness(0.6);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
 }
+
 
 /* TEXT TAGS */
 .unuppercase {
@@ -75,8 +111,27 @@ input, textarea {
 	letter-spacing: 0.4em;
 }
 
+
 /*  COMPONENTS
     =============== */
+
+#hamburger-menu {
+	height: 2rem;
+	width: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#hamburger-menu .line {
+	width: 100%;
+	height: 0.125rem;
+	background-color: black;
+}
+#hamburger-menu .line-1, #hamburger-menu .line-3 {
+	margin: 0.4rem 0;
+}
+
 .section {
 	display: flex;
 	flex-direction: column;
@@ -165,8 +220,16 @@ input, textarea {
 #card-2 { grid-area: card-2; }
 #card-3 { grid-area: card-3; }
 #card-4 { grid-area: card-4; }
-[id^='card-'] {padding: 3rem;}
-
+[id^='card-'] {
+	padding: 3rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	transition: 0.2s ease-in-out;
+}
+[id^='card-']:hover {
+	padding: 3.5rem;
+}
 #projects .card-container {
 	height: 100%;
 	margin: 2rem 0;
@@ -180,6 +243,11 @@ input, textarea {
 	color: var(--color-white);
 }
 
+#projects .card-container .card > h2 {
+	margin-top: auto;
+}
+
+
 /* SKILLS SECTION */
 #skills .container {
 	height: unset;
@@ -191,6 +259,7 @@ input, textarea {
 #skills #skills-programming, #skills #skills-libraries {
 	width: 25%;
 }
+
 
 /* CONTACT SECTION */
 #contact {
@@ -220,6 +289,7 @@ input, textarea {
 #contact #contact-description #contact-icons *:last-child {
 	margin-left: 0.5rem;
 }
+
 
 /* FOOTER SECTION */
 #footer {
@@ -269,4 +339,22 @@ input, textarea {
 }
 #contact-form textarea {
 	height: 15rem;
+}
+
+
+/* NAVBAR MENU */
+#navbar .nav-container {
+    width: 1400px;
+	max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar #logo {
+	font-size: 1.875rem;
+	letter-spacing: -0.06em;
+}
+#nav-cta > button {
+	font-size: 1.25rem;
 }
