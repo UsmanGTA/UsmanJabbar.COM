@@ -49,58 +49,33 @@ input, textarea {
 	background: var(--color-primary);
 	color: var(--color-white);
 }
-.bg-config::after {
-	background-position: center;
-	background-size: cover;
-}
 
 
 /* BACKGROUND TAGS */
 .bg-project-geeksultd:after {
-	content: "";
-	position: absolute;
-	background-image: url(../images/Usman-Abdul-Jabbar-NZXT-PC-2020.jpg)!important;
-	filter: brightness(0.6);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+	background-image: url(../images/Usman-Abdul-Jabbar-NZXT-PC-2020.jpg);
 }
 .bg-project-user-auth:after {
-	content: "";
-	position: absolute;
-	background-image: url(../images/tim-roosjen-shuJeGn-ze8-unsplash.jpg)!important;
-	filter: brightness(0.6);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+	background-image: url(../images/tim-roosjen-shuJeGn-ze8-unsplash.jpg);
 }
 .bg-project-simple-shell:after {
-	content: "";
-	position: absolute;
-	background-image: url(../images/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg)!important;
-	filter: brightness(0.6);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+	background-image: url(../images/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg);
 }
 .bg-project-airbnb:after {
-	content: "";
-	position: absolute;
-	background-image: url(../images/r-architecture-wDDfbanbhl8-unsplash.jpg)!important;
+	background-image: url(../images/r-architecture-wDDfbanbhl8-unsplash.jpg);
+}
+.bg-config::after {
+	background-position: center;
+	background-size: cover;
 	filter: brightness(0.6);
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	z-index: -1;
+	content: "";
+	position: absolute;
 }
-
 
 /* TEXT TAGS */
 .unuppercase {
@@ -169,7 +144,7 @@ input, textarea {
 }
 
 .button-minimal {
-	width: 200px;
+	width: 15rem;
     text-transform: uppercase;
     padding: 0.5rem 0 1rem 0;
 }
