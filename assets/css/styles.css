@@ -5,12 +5,6 @@
 	--color-primary: linear-gradient(270deg, #00E0FF 0.13%, #00A3FF 100.59%);
 }
 
-/* BASE TAGS */
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
 h1       { font-size: 4.375rem; }
 h2       { font-size: 2.500rem; }
 h3       { font-size: 1.563rem; }
@@ -21,6 +15,8 @@ input    { font-size: 1.563rem; }
 button   { font-size: 1.563rem; }
 textarea { font-size: 1.563rem; }
 
+b        { font-weight: 700; }
+
 h1, h2,
 h3, h4,
 h5, h6,
@@ -29,8 +25,15 @@ button {
 	margin: 1rem 0;
 	letter-spacing: -0.06em;
 }
-b { font-weight: 700; }
-p { letter-spacing: -0.06em;}
+
+p,
+input,
+textarea { letter-spacing: -0.06em;}
+
+input, textarea {	
+	overflow: hidden;
+	resize: none;
+}
 
 /* COLORS TAGS */
 .bg-color-black {
@@ -69,8 +72,9 @@ p { letter-spacing: -0.06em;}
 	font-weight: 400;
 }
 .letter-spacing-wide {
-	letter-spacing: 0.4rem;
+	letter-spacing: 0.4em;
 }
+
 /*  COMPONENTS
     =============== */
 .section {
@@ -108,6 +112,7 @@ p { letter-spacing: -0.06em;}
 	justify-content: center;
 	align-items: center;
 }
+
 .button-minimal {
 	width: 200px;
     text-transform: uppercase;
@@ -175,6 +180,7 @@ p { letter-spacing: -0.06em;}
 	color: var(--color-white);
 }
 
+/* SKILLS SECTION */
 #skills .container {
 	height: unset;
 }
@@ -193,12 +199,32 @@ p { letter-spacing: -0.06em;}
 }
 #contact #contact-description > h2 {
 	max-width: 50%;
+	margin: 0;
 }
 #contact form #form-details, #contact form #form-message {
 	width: 50%;
 }
+#contact svg {
+	height: 2.5rem;
+}
+#contact #contact-description {
+	display: flex;
+	justify-content: space-between;
+}
+#contact #contact-description #contact-icons {
+	margin-top: auto;
+}
+#contact #contact-description #contact-icons *:first-child {
+	margin-right: 0.5rem;
+}
+#contact #contact-description #contact-icons *:last-child {
+	margin-left: 0.5rem;
+}
 
 /* FOOTER SECTION */
+#footer {
+	color: var(--color-white);
+}
 #footer * {
 	text-transform: unset;
 	font-weight: 600;
@@ -210,4 +236,37 @@ p { letter-spacing: -0.06em;}
 }
 #footer h5.letter-spacing-wide {
 	text-transform: uppercase;
+}
+
+
+/* CONTACT FORMS */
+#contact-form {
+	display: flex;
+	margin: 1rem 0;
+}
+#contact-form input, #contact-form textarea {
+	width: calc(100% - 1.5rem);
+	padding: 1rem 0px 1rem 1.5rem;
+	margin: 1rem 0;
+	background-color: #292929;
+}
+#contact-form *::placeholder {
+	color: #c1c1c1;
+}
+#contact-form *:focus {
+	outline: none;
+}
+#contact-form #form-details {
+	margin-right: 1rem;
+}
+#contact-form #form-message {
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+#contact-form #form-message > button {
+	margin-left: auto;
+}
+#contact-form textarea {
+	height: 15rem;
 }

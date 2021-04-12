@@ -16,17 +16,16 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video,
-button,
-*:focus {
+button, textarea, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	color: inherit;
 	font-family: 'Be Vietnam', sans-serif !important;
 	font-weight: 600;
-	color: inherit;
 	vertical-align: baseline;
-	outline: none;
 	text-decoration: none;
+	outline: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
