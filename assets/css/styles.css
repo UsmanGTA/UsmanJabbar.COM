@@ -4,6 +4,7 @@
 	--color-black: #000;
 	--color-primary: linear-gradient(270deg, #00E0FF 0.13%, #00A3FF 100.59%);
 }
+html     { scroll-behavior: smooth; }
 
 h1       { font-size: 4.375rem; }
 h2       { font-size: 2.500rem; }
@@ -121,7 +122,7 @@ input, textarea {
 	opacity: 0;
 }
 #menu-btn-container #menu-btn #menu-btn-check:checked ~ .line-1 {
-	transform: rotate(45deg);
+	transform: rotate(225deg);
 }
 #menu-btn-container #menu-btn #menu-btn-check:checked ~ .line-2 {
 	transform: rotate(-45deg);
@@ -168,6 +169,21 @@ input, textarea {
 	width: 15rem;
     text-transform: uppercase;
     padding: 0.5rem 0 1rem 0;
+	transition: all 1s;
+}
+.button-minimal:hover {
+	border-radius: 20rem;
+}
+.button-minimal.bg-color-black:hover {
+	background: var(--color-primary);
+}
+.button-minimal.bg-color-white:hover {
+	background: var(--color-black);
+	color: var(--color-white);
+}
+.button-minimal.bg-color-primary:hover {
+	background: var(--color-white);
+	color: var(--color-black);
 }
 
 .inline-container > * {
@@ -217,14 +233,15 @@ input, textarea {
 #card-3 { grid-area: card-3; }
 #card-4 { grid-area: card-4; }
 [id^='card-'] {
-	padding: 3rem;
+	padding: 2.5rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	transition: 0.2s ease-in-out;
+	cursor: pointer;
 }
 [id^='card-']:hover {
-	padding: 3.5rem;
+	padding: 3rem;
 }
 #projects .card-container {
 	height: 100%;
