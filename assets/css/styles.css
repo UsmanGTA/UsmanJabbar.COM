@@ -362,6 +362,8 @@ input, textarea {
 	box-shadow: 0rem -8rem 10rem;
 	background-color: var(--color-white);
 	z-index: 100;
+	transition: all 1s;
+	top: 0;
 }
 
 #navbar .nav-container {
