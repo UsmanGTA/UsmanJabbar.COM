@@ -1,0 +1,10 @@
+#hero .inline-container {
+	display: flex;
+	flex-direction: column;
+}
+#hero .inline-container > * {
+	margin: unset;
+}
+h2 {
+	font-size: 30px;
+}
