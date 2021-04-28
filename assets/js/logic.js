@@ -30,10 +30,32 @@ window.onscroll = function() {
 	}
 }
 
-let menuItems = document.querySelectorAll('#navbar a')
+let menuItems = document.querySelectorAll('#navbar ul > li > a')
 for (const menuItem of menuItems) {
 	menuItem.addEventListener('click', () => {
 		menuBtn.checked = false;
 		menuBtn.onclick()
 	})
 }
+
+const animateLiText = (data) => {
+	for (const title of data) {
+		title.addEventListener('mouseenter', () => {
+			const currentHoverElement = title;
+			for (const item of data) {
+				if (item != currentHoverElement) { item.style.opacity = "0.3"; }
+			}
+			title.style.transition = "0.25s all ease-in-out"
+		})
+		title.addEventListener('mouseleave', () => {
+			for (const item of data) { item.style.opacity = "1"; }
+		})
+	}
+}
+
+let navMenuTitles = document.querySelectorAll('#navbar ul > li > a > h2');
+let footerJumpTitles = document.querySelectorAll('#footer-pages ul > li > a > h2');
+let footerSocialTitles = document.querySelectorAll('#footer-contact-links ul > li > a > h2');
+animateLiText(footerSocialTitles);
+animateLiText(footerJumpTitles);
+animateLiText(navMenuTitles);
